@@ -93,21 +93,18 @@ body {
   margin-left: 10px;
 }
 #header #name-and-slogan {
-  margin: 0 210px 0 180px;
+  margin: 3em 170px 0 200px;
   text-align: center;
-  height: 110px;
 }
 #header #name-and-slogan a {
   font-variant: small-caps;
   font-size: 1.4em;
-  line-height: 4em;
+  line-height: 1em;
   color: black;
   font-weight: 300;
 }
 #header #navigation {
   clear: both;
-  /* position: fixed;
-        top: 150px;*/
   width: 100%;
   max-width: 960px;
   position: relative;
@@ -143,10 +140,6 @@ body {
   list-style: none ;
 }
 #header #navigation li.active-trail {
-  /*background-color: @donkergroen;
-            a{
-                color: @geel;
-            }*/
   background-color: #e48122;
 }
 #header #navigation li.active-trail a {
@@ -163,49 +156,56 @@ body {
 #header #navigation a:hover {
   color: #2d371c;
 }
+#header #navigation #block-menu-menu-inschrijven,
+#header #navigation #block-menu-menu-info {
+  background-color: #e48122;
+  border-top: 2px solid white;
+  width: 100%;
+  float: left;
+}
 #header #navigation #block-menu-menu-inschrijven .contextual-links-wrapper,
 #header #navigation #block-menu-menu-info .contextual-links-wrapper {
   display: none;
 }
+#header #navigation #block-menu-menu-inschrijven .content,
+#header #navigation #block-menu-menu-info .content {
+  width: 90%;
+  margin: 0 auto;
+}
 #header #navigation #block-menu-menu-inschrijven ul,
 #header #navigation #block-menu-menu-info ul {
-  border-top: 2px solid white;
   line-height: 1em;
   font-size: .8em;
-  /*background-color: @donkergroen;*/
   background-color: #e48122;
   padding: .1em 0 .2em;
 }
 #header #navigation #block-menu-menu-inschrijven a,
 #header #navigation #block-menu-menu-info a {
-  /*color: @donkergrijs;*/
   color: white;
 }
 #header #navigation #block-menu-menu-inschrijven a.active-trail,
 #header #navigation #block-menu-menu-info a.active-trail {
-  /* color: @geel;*/
   color: #2d371c;
 }
 #header #navigation #block-menu-menu-inschrijven a:hover,
 #header #navigation #block-menu-menu-info a:hover {
   color: #2d371c;
 }
-.page-test #main-wrapper #main #content #block-system-main {
-  padding-right: 220px;
+.page-inschrijven #main-wrapper #main #content #block-system-main {
+  padding-right: 280px;
 }
-/*.page-info-sponsors #block-views-sponsor-block-1  {
-    height: 3em;
-    .view-content{
-        display: none;
-    }
-}*/
+.page-inschrijven #main-wrapper #main #content #block-system-main .content {
+  padding-right: 0;
+}
+.page-user-orders .action-links {
+  display: none;
+}
 #main-wrapper {
   display: block;
   float: left;
   width: 100%;
-  max-height: 600px;
-  /*overflow: scroll;*/
-  /*margin: 10.5em 0 0;*/
+  /*    max-height: 600px;
+*/
   margin: 0;
 }
 #main-wrapper #main {
@@ -217,13 +217,12 @@ body {
 #main-wrapper #main #content div.status,
 #main-wrapper #main #content div.tabs {
   background-color: white;
-  /*margin-top: 2em;*/
 }
 #main-wrapper #main #content .region.region-content {
   display: block;
   width: 100%;
   float: left;
-  background-color: rgba(255, 255, 255, 0.7);
+  /*background-color: rgba(255, 255, 255, .7);*/
 }
 #main-wrapper #main #content .region.region-content a {
   text-decoration: none;
@@ -237,7 +236,7 @@ body {
   display: block;
   width: 210px;
   float: right;
-  margin: 3em 4em 1em 1em;
+  margin: 4em 3em 1em 1em;
   border: 1px solid #e48122;
   border-radius: 5px;
   padding: 0 3px;
@@ -247,10 +246,8 @@ body {
   display: block;
 }
 #main-wrapper #main #content .region.region-content #block-commerce-cart-cart .content {
-  /*clear: left;*/
   width: 100%;
   margin: 0;
-  /* display: block;*/
   float: right;
 }
 #main-wrapper #main #content .region.region-content #block-commerce-cart-cart table {
@@ -276,14 +273,10 @@ body {
   text-align: center;
 }
 #main-wrapper #main #content .region.region-content #block-commerce-cart-cart .line-item-summary .line-item-total {
-  /* width: 100%;*/
   background-color: #e4e7e4;
   margin: .5em 0 .3em;
 }
 #main-wrapper #main #content .region.region-content #block-commerce-cart-cart .line-item-summary .line-item-total .line-item-total-raw {
-  /*float: right;
-                                width: auto;*/
-  /*margin-left: 5px;*/
   width: auto;
   float: right;
 }
@@ -292,12 +285,12 @@ body {
 }
 #main-wrapper #main #content #block-system-main {
   width: auto;
-  /*clear: both;*/
   background-color: white;
   margin: 0;
 }
 #main-wrapper #main #content #block-system-main .content {
-  padding: 2em 4em;
+  padding: 4em 4em 2em;
+  display: block;
 }
 #main-wrapper #main #content #block-system-main p {
   margin-bottom: 2em;
@@ -305,55 +298,29 @@ body {
 #main-wrapper #main #content #block-system-main h1 {
   display: none;
 }
-#main-wrapper #main #content #block-system-main .pane-commerce-cart-block {
-  background-color: white;
-  display: block;
-  width: 240px;
-  float: right;
-}
-#main-wrapper #main #content #block-system-main .pane-commerce-cart-block h2 {
+#main-wrapper #main #content #block-system-main .view-bestellingen-per-artikel-test .ingeschreven-lijst {
   width: 100%;
-  text-align: center;
+  clear: both;
 }
-#main-wrapper #main #content #block-system-main .pane-commerce-cart-block .content {
-  /*clear: left;*/
-  width: 100%;
-  margin: 0;
-}
-#main-wrapper #main #content #block-system-main .pane-commerce-cart-block table {
-  width: 100%;
-}
-#main-wrapper #main #content #block-system-main #hotel-prijzen {
-  width: 100%;
-  float: left;
-  text-align: left;
-}
-#main-wrapper #main #content #block-system-main #hotel-prijzen table.prijzen {
-  background-color: #e4e7e4;
-  width: 280px !important;
-  margin: .5em auto 1.5em;
-  float: none;
-}
-#main-wrapper #main #content #block-system-main #hotel-prijzen table.prijzen th {
+#main-wrapper #main #content #block-system-main .view-bestellingen-per-artikel-test .ingeschreven-lijst h3 {
+  line-height: auto;
+  margin: .5em 0 1em;
   font-variant: small-caps;
-  padding-top: 1em;
-  width: auto;
-  margin: 0;
-  border-bottom: 1px solid white;
-  text-align: center;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
-#main-wrapper #main #content #block-system-main #hotel-prijzen table.prijzen td {
-  text-align: center;
+#main-wrapper #main #content #block-system-main .view-bestellingen-per-artikel-test .ingeschreven-lijst ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  padding-bottom: 2em;
 }
-#main-wrapper #main #content #block-system-main #hotel-prijzen table.prijzen th,
-#main-wrapper #main #content #block-system-main #hotel-prijzen table.prijzen td {
-  vertical-align: top !important;
-  display: table-cell;
-  font-size: .9em  !important;
-  line-height: 1.3em;
-  padding: .5em ;
-  width: auto;
-  margin: 0;
+#main-wrapper #main #content #block-system-main .view-bestellingen-per-artikel-test .ingeschreven-lijst ol li .views-field {
+  display: inline-block;
+  margin-right: 1em;
+}
+#main-wrapper #main #content #block-system-main .view-bestellingen-per-artikel-test .ingeschreven-lijst ol li .views-field-commerce-customer-address-name-line {
+  margin-left: 2em;
 }
 #main-wrapper #main #content #block-system-main .node-welkom table {
   margin: 1em auto;
@@ -392,55 +359,8 @@ body {
 #main-wrapper #main #content #block-system-main table.views-table {
   float: none;
 }
-#main-wrapper #main #content #block-system-main form.webform-client-form {
-  display: block;
-  clear: both;
-  width: 550px;
-  margin: 3em auto 1em;
-  background-color: #2d371c;
-  border-radius: 10px;
-  color: white;
-  padding: 10px;
-}
-#main-wrapper #main #content #block-system-main .webform-container-inline label {
-  width: 120px ;
-  display: block;
-  float: left;
-  font-variant: small-caps;
-  font-size: 12px;
-}
-#main-wrapper #main #content #block-system-main .webform-container-inline.starttijd {
-  display: inline;
-}
-#main-wrapper #main #content #block-system-main .webform-container-inline.starttijd label {
-  width: auto ;
-  display: inline;
-  float: none;
-  font-variant: small-caps;
-  font-size: 12px;
-}
-#main-wrapper #main #content #block-system-main .webform-container-inline.starttijd.einde label {
-  margin-left: 1em;
-}
-#main-wrapper #main #content #block-system-main .webform-container-inline.webform-component-radios label {
-  width: auto;
-  display: inline;
-  float: none;
-  margin-right: 2em;
-}
-#main-wrapper #main #content #block-system-main input.webform-submit {
-  margin: 3em auto 1em;
-  width: 70px;
-  display: block;
-  background-color: #e7c876;
-  border-radius: 10px;
-  width: 80px;
-  height: 25px;
-  border: 1px solid #2d371c;
-}
-#main-wrapper #main #content #block-system-main .description {
-  line-height: 1.3em;
-  font-style: italic;
+#main-wrapper #main #content #block-system-main .view-mode-customer table.views-table {
+  width: 100%;
 }
 #main-wrapper #main #content #block-system-main .view-fotogallerij {
   width: 450px;
@@ -469,30 +389,26 @@ body {
   color: black;
   display: block;
 }
-#main-wrapper #main #content #block-system-main #ingeschreven .pane-inschrijvingen {
-  margin-botom: 2em;
-}
-#main-wrapper #main #content #block-system-main #ingeschreven .panel-separator {
-  height: 2em;
-}
-#main-wrapper #main #content #block-system-main #ingeschreven ol {
-  list-style: inside decimal;
-}
-#main-wrapper #main #content #block-system-main #ingeschreven .pane-content {
-  margin-left: 2em;
-}
-#main-wrapper #main #content #block-system-main #ingeschreven li .views-field {
-  display: inline-block;
-  line-height: 1.8em;
-}
-#main-wrapper #main #content #block-system-main #ingeschreven li .views-field .naam {
-  margin-right: 2em;
+#main-wrapper #main #content #block-system-main #formulieren {
+  /*.view-tornooien .views-row-1{
+                        border-top: none;
+                    }*/
 }
 #main-wrapper #main #content #block-system-main #formulieren h2.pane-title {
   display: none;
 }
-#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje {
-  /* margin-right: 200px;*/
+#main-wrapper #main #content #block-system-main #formulieren .views-row {
+  border-top: 1px solid #e4e7e4;
+}
+#main-wrapper #main #content #block-system-main #formulieren .node-allerlei {
+  margin: 0 0 1em;
+  float: left;
+}
+#main-wrapper #main #content #block-system-main #formulieren .node-allerlei p {
+  margin-bottom: 1em;
+}
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje p {
+  margin-bottom: 0;
 }
 #main-wrapper #main #content #block-system-main #formulieren .add-to-mandje h3 {
   display: none;
@@ -504,122 +420,158 @@ body {
   font-weight: 300;
   letter-spacing: 1px;
 }
-#main-wrapper #main #content #block-system-main #formulieren .views-row,
-#main-wrapper #main #content #block-system-main #formulieren .node-hotel-display {
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-body,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .field-name-body {
+  margin-bottom: 1em;
+}
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-row,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .node-hotel-display {
   clear: left;
-  margin-bottom: 2em;
-}
-#main-wrapper #main #content #block-system-main #formulieren .views-field-commerce-price {
-  width: auto;
+  margin-bottom: 3em;
+  width: 100%;
   float: left;
-  margin-right: 4em;
 }
-#main-wrapper #main #content #block-system-main #formulieren .views-field-add-to-cart-form {
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-commerce-price,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-product-field-commerce-price {
+  width: 15%;
   float: left;
-  width: auto;
-  margin-bottom: 4em;
-}
-#main-wrapper #main #content #block-system-main #formulieren .views-field-add-to-cart-form .form-item,
-#main-wrapper #main #content #block-system-main #formulieren .views-field-add-to-cart-form .form-actions {
   margin: 0;
 }
-#main-wrapper #main #content #block-system-main #formulieren .views-field-add-to-cart-form .form-item-quantity {
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart {
+  float: right;
+  width: 80%;
+  margin: 0;
+}
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form .form-item,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart .form-item,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form .form-actions,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart .form-actions {
+  margin: 0;
+}
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form .form-item-quantity,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart .form-item-quantity {
   width: auto;
   float: left;
   margin-right: 4em;
 }
-#main-wrapper #main #content #block-system-main #formulieren .views-field-add-to-cart-form .form-item-quantity label {
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form .form-item-quantity label,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart .form-item-quantity label {
   width: auto;
   float: left;
   margin-right: 1em;
 }
-#main-wrapper #main #content #block-system-main #formulieren .views-field-add-to-cart-form .form-item-quantity input#edit-quantity {
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form .form-item-quantity input,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart .form-item-quantity input {
   float: left;
+  width: 30px;
+  text-align: center;
 }
-#main-wrapper #main #content #block-system-main #formulieren .views-field-add-to-cart-form input.form-submit {
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form input.form-submit,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart input.form-submit,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form .button-brabantse,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart .button-brabantse {
+  width: auto;
+  background-color: #e48122;
+  float: right;
+  padding: 1px 10px;
+  border: 1px solid #e48122;
+  border-radius: 10px;
+  font-size: .8em;
+  color: white;
+  line-height: 1em;
+}
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form input.form-submit a,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart input.form-submit a,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form .button-brabantse a,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart .button-brabantse a {
+  color: white;
+}
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form input.form-submit a:hover,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart input.form-submit a:hover,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form .button-brabantse a:hover,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart .button-brabantse a:hover {
+  color: black;
+}
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form input.form-submit:hover,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart input.form-submit:hover {
+  color: black;
+}
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form .form-type-select,
+#main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart .form-type-select {
   width: auto;
   float: left;
-  background-color: #e48122;
-}
-#main-wrapper #main #content #block-system-main #formulieren .node-hotel-display .content {
-  padding: 0;
+  margin: 0;
+  line-height: 1.5em;
 }
 #main-wrapper #main #content #block-system-main #formulieren #hotel-boeken {
-  clear: left;
-}
-#main-wrapper #main #content #block-system-main #formulieren #hotel-boeken h2.pane-title {
-  display: block;
-}
-#main-wrapper #main #content #block-system-main #formulieren #hotel-boeken .node-35-product-commerce-price {
-  width: auto;
-  float: left;
-  margin-right: 4em;
-}
-#main-wrapper #main #content #block-system-main #formulieren #hotel-boeken .commerce-add-to-cart {
-  float: left;
-  width: 80%;
-  margin-bottom: 4em;
-}
-#main-wrapper #main #content #block-system-main #formulieren #hotel-boeken .commerce-add-to-cart .form-item,
-#main-wrapper #main #content #block-system-main #formulieren #hotel-boeken .commerce-add-to-cart .form-actions {
-  margin: 0;
-}
-#main-wrapper #main #content #block-system-main #formulieren #hotel-boeken .commerce-add-to-cart .form-type-select {
-  width: auto;
-  float: left;
-  margin-right: 4em;
-}
-#main-wrapper #main #content #block-system-main #formulieren #hotel-boeken .commerce-add-to-cart input.form-submit {
-  width: auto;
-  float: left;
-  background-color: #e48122;
-}
-#main-wrapper #main #content #block-system-main #formulieren #mini-shoppingcart {
-  width: 180px;
-  display: block;
-  float: right;
-  margin: 0 0 1em 1em;
-  border: 1px solid #e4e7e4;
-}
-#main-wrapper #main #content #block-system-main #formulieren #mini-shoppingcart h2.pane-title {
-  display: block;
-}
-#main-wrapper #main #content #block-system-main #formulieren #mini-shoppingcart .view-mini-shopping-cart .view-content {
-  display: none;
-}
-#main-wrapper #main #content #block-system-main #formulieren #mini-shoppingcart h2 {
-  text-align: center;
-  background-color: #e4e7e4;
-  margin: 0;
-  padding: .5em 0;
-}
-#main-wrapper #main #content #block-system-main #formulieren #mini-shoppingcart .pane-content,
-#main-wrapper #main #content #block-system-main #formulieren #mini-shoppingcart .view-mini-shopping-cart,
-#main-wrapper #main #content #block-system-main #formulieren #mini-shoppingcart .line-item-total-raw {
   width: 100%;
-  display: block;
   float: left;
+  border-top: 1px solid #e4e7e4;
 }
-#main-wrapper #main #content #block-system-main #formulieren #mini-shoppingcart .line-item-total-label {
-  display: none;
+#main-wrapper #main #content #block-system-main #formulieren #hotel-boeken .content {
+  padding: 1em 0 0;
 }
-#main-wrapper #main #content #block-system-main #formulieren #mini-shoppingcart .line-item-total-raw {
-  text-align: center;
-  width: 100%;
+#main-wrapper #main #content #block-system-main #formulieren #hotel-boeken h2 {
+  margin: .5em 0 1em;
+  font-variant: small-caps;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 1px;
   display: block;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #e4e7e4;
-}
-#main-wrapper #main #content #block-system-main #formulieren #mini-shoppingcart p {
-  margin-bottom: .5em;
-  text-align: center;
 }
 #main-wrapper #main #content #block-system-main .view-commerce-cart-form {
-  width: 600px;
-  margin: 1em auto;
+  width: 100%;
+  margin: 1em 0;
+  border: 1px solid #e48122;
+  border-radius: 20px;
+}
+#main-wrapper #main #content #block-system-main .view-commerce-cart-form #views-form-commerce-cart-form-default {
+  width: 90%;
+  margin: 4em auto;
 }
 #main-wrapper #main #content #block-system-main .view-commerce-cart-form table.views-table {
   width: 100%;
+}
+#main-wrapper #main #content #block-system-main .view-commerce-cart-form table.views-table td.views-field-commerce-total {
+  text-align: right;
+}
+#main-wrapper #main #content #block-system-main .view-commerce-cart-form table.views-table th {
+  padding-bottom: 1em;
+}
+#main-wrapper #main #content #block-system-main .view-commerce-cart-form table.views-table th.views-field-commerce-total {
+  text-align: right;
+}
+#main-wrapper #main #content #block-system-main .view-commerce-cart-form #edit-submit:hover,
+#main-wrapper #main #content #block-system-main .view-commerce-cart-form #edit-checkout:hover,
+#main-wrapper #main #content #block-system-main .view-commerce-cart-form .delete-line-item:hover {
+  color: #e48122;
+}
+#main-wrapper #main #content #block-system-main .view-commerce-cart-form #edit-checkout {
+  margin-left: 1em;
+}
+#main-wrapper #main #content #block-system-main .view-commerce-user-orders table {
+  width: 100%;
+}
+#main-wrapper #main #content #block-system-main .commerce-order-commerce-order {
+  width: 100%;
+  margin: 1em 0;
+  padding: 1em 0;
+  border: 1px solid #e48122;
+  border-radius: 20px;
+}
+#main-wrapper #main #content #block-system-main .commerce-order-commerce-order .field {
+  width: 90%;
+  margin: 0 auto;
+}
+#main-wrapper #main #content #block-system-main .commerce-order-commerce-order .field-label {
+  display: none;
+}
+#main-wrapper #main #content #block-system-main .commerce-order-commerce-order .field-items .field-label {
+  display: block;
+}
+#main-wrapper #main #content #block-system-main .commerce-order-commerce-order .field-type-commerce-customer-profile-reference {
+  margin-top: 2em;
 }
 #main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout .fieldset-legend {
   font-variant: small-caps;
@@ -628,11 +580,21 @@ body {
   letter-spacing: 1px;
 }
 #main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout #edit-cart-contents {
-  width: 600px;
+  width: 70%;
+  margin: 1em auto;
+  border: 1px solid #e48122;
+  border-radius: 20px;
   margin: 1em auto 3em;
 }
 #main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout #edit-cart-contents table.views-table {
   width: 100%;
+}
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout #edit-cart-contents tr.component-type-commerce-price-formatted-amount {
+  border-bottom: none;
+}
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout #edit-cart-contents .view-commerce-cart-summary {
+  width: 95%;
+  margin: 2em auto;
 }
 #main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout #edit-cart-contents table.commerce-price-formatted-components {
   background-color: white;
@@ -641,13 +603,14 @@ body {
   background-color: white;
 }
 #main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout fieldset {
-  border: 1px solid #e4e7e4;
+  border: 1px solid #e48122;
   padding: 1em;
   margin-bottom: 2em;
 }
 #main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout .form-item {
   clear: both;
   float: left;
+  margin-bottom: 0;
 }
 #main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout .form-item label {
   float: left;
@@ -662,19 +625,27 @@ body {
   clear: both;
   float: left;
 }
-#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout .field-widget-options-buttons .form-radios {
-  float: left;
-  width: auto;
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout .form-item .form-radios {
   display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout .field-widget-options-buttons .form-radios .form-item {
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout .form-item .form-radios .form-item {
   float: left;
-  width: auto;
+  clear: none;
+  margin: 0 3em 0 0;
+  line-height: 1em;
 }
-#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout .field-widget-options-buttons .form-radios .form-item label.option {
-  float: left;
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout .form-item .form-radios .form-item label {
   width: auto;
-  margin-right: 2em;
+  margin-right: .5em;
+}
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout .form-item .form-radios .form-item input.form-radio {
+  margin-top: 0;
+}
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout .description {
+  line-height: 1.3em;
+  font-style: italic;
 }
 #main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout #edit-commerce-payment label {
   width: auto;
@@ -682,21 +653,20 @@ body {
 }
 #main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout #edit-commerce-payment img {
   float: left;
-  margin-right: .5em ;
+  margin: -0.5em 0.5em 0 0;
   width: auto;
 }
 #main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout #edit-commerce-payment #edit-commerce-payment-payment-method-paypal-wpscommerce-payment-paypal-wps {
   float: left;
   width: auto;
   margin-right: 2em;
-  height: 5em;
+  height: 1.5em;
 }
 #main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout #edit-commerce-payment label.option {
-  float: left;
-  width: auto;
+  float: right;
+  width: 95%;
 }
 #main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout #edit-commerce-payment .commerce-paypal-icons {
-  clear: left;
   float: left;
   display: inline-block;
   margin-top: 1em;
@@ -706,6 +676,39 @@ body {
   margin-right: 1em;
   width: auto;
   padding: 0;
+  line-height: 1.5em;
+}
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout fieldset#edit-buttons {
+  border: none;
+  width: 100%;
+}
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout fieldset#edit-buttons .fieldset-wrapper {
+  width: 360px;
+  margin: 2em auto;
+}
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout fieldset#edit-buttons #edit-continue,
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout fieldset#edit-buttons #edit-cancel {
+  width: auto;
+  background-color: #e48122;
+  padding: 8px 15px;
+  border: 1px solid #e48122;
+  border-radius: 10px;
+  font-size: .8em;
+  color: white;
+  line-height: 1em;
+}
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout fieldset#edit-buttons #edit-continue {
+  margin-right: 2em;
+}
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout fieldset#edit-buttons #edit-cancel {
+  margin-left: 2em;
+}
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout fieldset#edit-buttons #edit-continue:hover,
+#main-wrapper #main #content #block-system-main #commerce-checkout-form-checkout fieldset#edit-buttons #edit-cancel:hover {
+  color: black;
+}
+#main-wrapper #main #content #commerce-checkout-form-complete legend .fieldset-legend {
+  display: none;
 }
 #main-wrapper #main #content #block-block-1.contactinfo {
   background-color: white;
@@ -745,8 +748,7 @@ body {
 }
 #main-wrapper #main #content #block-views-sponsor-block-1,
 #main-wrapper #main #content #sponsors {
-  /*background-color: white;*/
-  margin: 0 0 1em;
+  margin-bottom: 1em;
   width: 100%;
   clear: both;
 }
@@ -756,6 +758,9 @@ body {
   background-color: white;
   margin: 0 .2em 0 0;
   padding: 0;
+  width: 160px;
+  height: 100px;
+  border: 1px solid #e4e7e4;
 }
 #main-wrapper #main #content #block-views-sponsor-block-1 .views-row a,
 #main-wrapper #main #content #sponsors .views-row a {
@@ -769,21 +774,46 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-#main-wrapper #main #content #block-views-sponsor-block-1 .node-sympathisanten .field-item,
-#main-wrapper #main #content #sponsors .node-sympathisanten .field-item {
-  display: inline-block;
-  margin: 0 3em 2em 0;
-}
-#main-wrapper #main #content #sponsors .views-row {
-  border: 1px solid #e4e7e4;
-}
+#main-wrapper #main #content #block-views-sponsor-block-1 .hoofdsponsors,
 #main-wrapper #main #content #sponsors .hoofdsponsors,
+#main-wrapper #main #content #block-views-sponsor-block-1 .sponsors,
 #main-wrapper #main #content #sponsors .sponsors {
-  margin-bottom: 2em;
+  margin-bottom: 4em;
+}
+#main-wrapper #main #content #block-views-sponsor-block-1 .pane-node h2,
+#main-wrapper #main #content #sponsors .pane-node h2 {
+  margin-bottom: 0.5em;
+}
+#main-wrapper #main #content #block-views-sponsor-block-1 .pane-node .node-sympathisanten .field-item,
+#main-wrapper #main #content #sponsors .pane-node .node-sympathisanten .field-item {
+  margin: 0 ;
+}
+#main-wrapper #main #content #block-views-sponsor-block-1 .pane-node .node-sympathisanten .field-item p,
+#main-wrapper #main #content #sponsors .pane-node .node-sympathisanten .field-item p {
+  margin-bottom: 0;
+  line-height: 2em;
 }
 #main-wrapper #main #content #block-views-sponsor-block-1 {
   margin-top: 1em;
 }
 #main-wrapper #main #content #block-views-sponsor-block-1 h2 {
   display: none;
+}
+@media screen and (max-width: 840px) and (min-width: 481px) {
+  #header #name-and-slogan {
+    margin: 3.5em 3% 0 200px;
+    text-align: right;
+  }
+  #header #name-and-slogan a {
+    font-size: 1.2em;
+  }
+  #main-wrapper #main #content #block-system-main .content {
+    padding: 2em ;
+  }
+  #main-wrapper #main #content .region.region-content #block-commerce-cart-cart {
+    margin: 2em 1em 1em;
+  }
+  .page-inschrijven #main-wrapper #main #content #block-system-main {
+    padding-right: 250px;
+  }
 }

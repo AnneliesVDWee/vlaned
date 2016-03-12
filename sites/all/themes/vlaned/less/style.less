@@ -69,9 +69,6 @@ body{
       -o-background-size: cover;
       background-size: cover;
 }
-body.front{
-
-}
 #page-wrapper{
     position: relative;
     font-size: 1em;
@@ -85,9 +82,6 @@ body.front{
         background-color: rgba(255, 255, 255, .7);
         display: block;
     }
-
-
-
 }
 
 #header{
@@ -118,22 +112,20 @@ body.front{
         margin-left: 10px;
     }
     #name-and-slogan{
-        margin: 0 210px 0 180px;
+        margin: 3em 170px 0 200px;
         text-align: center;
-        height: 110px;
+
 
         a{
             font-variant: small-caps;
             font-size: 1.4em;
-            line-height: 4em;
+            line-height: 1em;
             color: black;
             font-weight: 300;
         }
     }
     #navigation{
         clear: both;
-       /* position: fixed;
-        top: 150px;*/
         width: 100%;
         max-width: 960px;
         position: relative;
@@ -150,16 +142,15 @@ body.front{
         }
         ul{
             background-color: white;
-           margin: 0;
-           padding: 0;
-           line-height: 1em;
-           width: 100%;
-           list-style: none ;
-           position: relative;
-           font-size: 1em;
-           display: inline-block;
-           float: left;
-
+            margin: 0;
+            padding: 0;
+            line-height: 1em;
+            width: 100%;
+            list-style: none ;
+            position: relative;
+            font-size: 1em;
+            display: inline-block;
+            float: left;
         }
         li{
             float: left;
@@ -170,10 +161,6 @@ body.front{
             list-style: none ;
         }
         li.active-trail{
-            /*background-color: @donkergroen;
-            a{
-                color: @geel;
-            }*/
             background-color: @oranje;
             a{
                 color: @donkergroen;
@@ -192,69 +179,63 @@ body.front{
             color: @donkergroen;
         }
         #block-menu-menu-inschrijven, #block-menu-menu-info {
+            background-color: @oranje;
+            border-top: 2px solid white;
+            width: 100%;
+            float: left;
             .contextual-links-wrapper{
                 display: none;
             }
-            ul{ border-top: 2px solid white;
+            .content{
+                width: 90%;
+                margin: 0 auto;
+            }
+            ul{
                 line-height: 1em;
                 font-size: .8em;
-                /*background-color: @donkergroen;*/
                 background-color: @oranje;
                 padding: .1em 0 .2em;
             }
             a{
-                /*color: @donkergrijs;*/
                 color: white;
 
             }
             a.active-trail{
-               /* color: @geel;*/
                color: @donkergroen;
-
             }
             a:hover{
                 color: @donkergroen;
             }
         }
-
-
     }
-
-
 }
-.page-test #main-wrapper #main #content #block-system-main{
-    padding-right: 220px;
-}
-/*.page-info-sponsors #block-views-sponsor-block-1  {
-    height: 3em;
-    .view-content{
-        display: none;
+.page-inschrijven #main-wrapper #main #content #block-system-main{
+    padding-right: 280px;
+    .content{
+        padding-right: 0;
     }
-}*/
-
+}
+.page-user-orders .action-links{
+    display: none;
+}
 #main-wrapper{
     display: block;
     float: left;
     width: 100%;
-    max-height: 600px;
-    /*overflow: scroll;*/
-    /*margin: 10.5em 0 0;*/
-    margin: 0;
-
-
+/*    max-height: 600px;
+*/    margin: 0;
     #main{
         margin: 0;
         #content{
             width: 100%;
             div.status, div.tabs{
                 background-color: white;
-                /*margin-top: 2em;*/
             }
             .region.region-content{
                 display: block;
                 width: 100%;
                 float: left;
-                background-color: rgba(255, 255, 255, .7);
+                /*background-color: rgba(255, 255, 255, .7);*/
                 a{
                     text-decoration: none;
                     color: @oranje;
@@ -262,28 +243,22 @@ body.front{
                 a:hover{
                     color: @donkergrijs;
                 }
-
                 #block-commerce-cart-cart{
                     background-color: white;
                     display: block;
                     width: 210px;
                     float: right;
-                    margin: 3em 4em 1em 1em;
+                    margin: 4em 3em 1em 1em;
                     border: 1px solid @oranje;
                     border-radius: 5px;
                     padding: 0 3px;
-
                     h2{
-
                         text-align: center;
-
                         display: block;
                     }
                     .content{
-                        /*clear: left;*/
                         width: 100%;
                         margin: 0;
-                       /* display: block;*/
                         float: right;
                     }
                     table{
@@ -309,39 +284,27 @@ body.front{
                     .line-item-summary {
                         margin-bottom: 0;
                         text-align: center;
-
                         .line-item-total{
-                           /* width: 100%;*/
                            background-color: @lichtgrijs;
                            margin: .5em 0 .3em;
                             .line-item-total-raw{
-                                /*float: right;
-                                width: auto;*/
-                                /*margin-left: 5px;*/
                                 width: auto;
                                 float: right;
                             }
                             .line-item-total-label{
                                 margin-left: 2em;
                             }
-
                         }
                     }
-
-
                 }
             }
-
-
-
-
             #block-system-main{
                 width: auto;
-                /*clear: both;*/
                 background-color: white;
                 margin: 0;
                 .content{
-                    padding: 2em 4em;
+                    padding: 4em 4em 2em;
+                    display: block;
                 }
                 p{
                     margin-bottom: 2em;
@@ -349,59 +312,31 @@ body.front{
                 h1{
                     display: none;
                 }
-
-                .pane-commerce-cart-block{
-                    background-color: white;
-                    display: block;
-                    width: 240px;
-                    float: right;
-
-                    h2{
+                .view-bestellingen-per-artikel-test{
+                    .ingeschreven-lijst{
                         width: 100%;
-                        text-align: center;
-
-                    }
-                    .content{
-                        /*clear: left;*/
-                        width: 100%;
-                        margin: 0;
-
-                    }
-                    table{
-                        width: 100%;
-                    }
-
-
-                }
-                #hotel-prijzen{
-                    width: 100%;
-                    float: left;
-                    text-align: left;
-                    table.prijzen{
-                        background-color: @lichtgrijs;
-
-                        width: 280px !important;
-                        margin: .5em auto 1.5em;
-                        float: none;
-                        th{
+                        clear: both;
+                        h3{
+                            line-height: auto;
+                            margin: .5em 0 1em;
                             font-variant: small-caps;
-                            padding-top:1em;
-                            width: auto;
-                            margin: 0;
-                            border-bottom: 1px solid white;
-                            text-align: center;
+                            font-size: 1em;
+                            font-weight: 300;
+                            letter-spacing: 1px;
                         }
-                        td{
-                            text-align: center;
-                        }
-                        th, td{
-                            vertical-align: top !important;
-                            display: table-cell;
-                            font-size: .9em  !important;
-                            line-height: 1.3em;
-                            padding:  .5em ;
-                            width: auto;
-                            margin: 0;
+                        ol{
+                            list-style-type: decimal;
+                            list-style-position: inside;
+                            padding-bottom: 2em;
+                            li{
+                                .views-field{
+                                    display: inline-block;
+                                    margin-right: 1em;
+                                }
+                                .views-field-commerce-customer-address-name-line{
+                                    margin-left: 2em;
+                                }
+                            }
                         }
                     }
                 }
@@ -439,67 +374,14 @@ body.front{
                     float: left;
                     margin: 0 1em 1em 0;
                     }
-
                 }
                 table.views-table{
                     float: none;
                 }
+                .view-mode-customer table.views-table{
+                    width: 100%;
+                }
 
-                form.webform-client-form{
-                    display: block;
-                    clear: both;
-
-                    width: 550px;
-                    margin: 3em auto 1em;
-                    background-color: @donkergroen;
-                    border-radius: 10px;
-                    color: white;
-                    padding: 10px;
-
-                }
-                .webform-container-inline {
-                    label{
-                        width: 120px ;
-                        display: block;
-                        float: left;
-                        font-variant: small-caps;
-                        font-size: 12px;
-                    }
-                }
-                .webform-container-inline.starttijd{
-                    display: inline;
-                    label{
-                        width: auto ;
-                        display: inline;
-                        float: none;
-                        font-variant: small-caps;
-                        font-size: 12px;
-                    }
-                }
-                .webform-container-inline.starttijd.einde label{
-                    margin-left: 1em;
-
-                }
-                .webform-container-inline.webform-component-radios label{
-                        width: auto;
-                        display: inline;
-                        float: none;
-                        margin-right: 2em;
-                    }
-                input.webform-submit{
-                    margin: 3em auto 1em;
-                    width: 70px;
-                    display: block;
-                    background-color: @geel;
-                    border-radius: 10px;
-                    width: 80px;
-                    height: 25px;
-                    border: 1px solid @donkergroen;
-                }
-                .description{
-                    line-height: 1.3em;
-                    font-style: italic;
-                }
                 .view-fotogallerij{
                     width: 450px;
                     margin: 1em auto;
@@ -528,36 +410,27 @@ body.front{
                         }
                     }
                 }
-                #ingeschreven {
-                    .pane-inschrijvingen{
-                        margin-botom: 2em;
-                    }
-                    .panel-separator{
-                        height: 2em;
-                    }
-
-                    ol{
-                        list-style: inside decimal;
-                    }
-                    .pane-content{
-                        margin-left: 2em;
-                    }
-                    li .views-field{
-                        display: inline-block;
-                        line-height: 1.8em;
-                        .naam{
-                            margin-right: 2em;
-                        }
-                    }
-                }
-
                 #formulieren{
                     h2.pane-title{
                         display: none;
                     }
+                    .views-row{
+                        border-top: 1px solid @lichtgrijs;
+                    }
+                    /*.view-tornooien .views-row-1{
+                        border-top: none;
+                    }*/
+                    .node-allerlei{
+                        margin: 0 0 1em;
+                        float: left;
+                        p{
+                            margin-bottom: 1em;
+                        }
+                    }
                     .add-to-mandje{
-
-                       /* margin-right: 200px;*/
+                        p{
+                            margin-bottom: 0;
+                        }
                         h3{
                             display: none;
                         }
@@ -568,137 +441,140 @@ body.front{
                             font-weight: 300;
                             letter-spacing: 1px;
                         }
-                    }
-                    .views-row, .node-hotel-display{
-                        clear: left;
-                        margin-bottom: 2em;
-
-
-                    }
-                    .views-field-commerce-price{
-                        width: auto;
-                        float: left;
-                        margin-right: 4em;
-                    }
-                    .views-field-add-to-cart-form{
-
-                        float: left;
-                        width: auto;
-                        margin-bottom: 4em;
-
-                        .form-item, .form-actions {
+                        .views-field-body, .field-name-body{
+                            margin-bottom: 1em;
+                        }
+                        .views-row, .node-hotel-display{
+                            clear: left;
+                            margin-bottom: 3em;
+                            width: 100%;
+                            float: left;
+                        }
+                        .views-field-commerce-price, .commerce-product-field-commerce-price{
+                            width: 15%;
+                            float: left;
                             margin: 0;
                         }
-                        .form-item-quantity{
-                            width: auto;
-                            float: left;
-                            margin-right: 4em;
-                            label{
-                                width: auto;
-                                float: left;
-                                margin-right: 1em;
-                            }
-                            input#edit-quantity{
-                                float: left;
-
-                            }
-                        }
-                        input.form-submit{
-                            width: auto;
-                            float: left;
-                            background-color: @oranje;
-                        }
-                    }
-                    .node-hotel-display{
-                        .content{
-                            padding: 0;
-                        }
-                    }
-                    #hotel-boeken {
-                        clear: left;
-                        h2.pane-title{
-                            display: block;
-
-                        }
-                        .node-35-product-commerce-price{
-                            width: auto;
-                            float: left;
-                            margin-right: 4em;
-
-
-                        }
-                        .commerce-add-to-cart{
-                            float: left;
+                        .views-field-add-to-cart-form, .commerce-add-to-cart{
+                            float: right;
                             width: 80%;
-                            margin-bottom: 4em;
+                            margin: 0;
                             .form-item, .form-actions {
                                 margin: 0;
                             }
-                            .form-type-select{
+                            .form-item-quantity{
                                 width: auto;
                                 float: left;
                                 margin-right: 4em;
+                                label{
+                                    width: auto;
+                                    float: left;
+                                    margin-right: 1em;
+                                }
+                                input{
+                                    float: left;
+                                    width: 30px;
+                                    text-align: center;
+                                }
                             }
-                            input.form-submit{
+                            input.form-submit, .button-brabantse{
+                                width: auto;
+                                background-color: @oranje;
+                                float: right;
+                                padding: 1px 10px;
+                                border: 1px solid @oranje;
+                                border-radius: 10px;
+                                font-size: .8em;
+                                color: white;
+                                line-height: 1em;
+                                a{
+                                    color: white;
+                                }
+                                a:hover{
+                                    color: black;
+                                }
+                            }
+                            input.form-submit:hover{
+                                color: black;
+                            }
+
+                            .form-type-select{
                                 width: auto;
                                 float: left;
-                                background-color: @oranje;
-
+                                margin: 0;
+                                line-height: 1.5em;
                             }
-
                         }
                     }
-                    #mini-shoppingcart{
-                        width: 180px;
-                        display: block;
-                        float: right;
-                        margin: 0 0 1em 1em;
-                        border: 1px solid @lichtgrijs;
-                        h2.pane-title{
-                            display: block;
-                        }
-
-
-                        .view-mini-shopping-cart .view-content{
-                            display: none;
+                    #hotel-boeken{
+                        width: 100%;
+                        float: left;
+                        border-top: 1px solid @lichtgrijs;
+                        .content{
+                            padding: 1em 0 0;
                         }
                         h2{
-                            text-align: center;
-                            background-color: @lichtgrijs;
-                            margin: 0;
-                            padding: .5em 0;
-                        }
-                        .pane-content, .view-mini-shopping-cart, .line-item-total-raw{
-                            width: 100%;
+                            margin: .5em 0 1em;
+                            font-variant: small-caps;
+                            font-size: 1em;
+                            font-weight: 300;
+                            letter-spacing: 1px;
                             display: block;
-                            float: left;
                         }
-
-                        .line-item-total-label{
-                            display: none;
-                        }
-                        .line-item-total-raw{
-                            text-align:center;
-                            width: 100%;
-                            display: block;
-                            padding-bottom: 1em;
-                            border-bottom: 1px solid @lichtgrijs;
-
-                        }
-                        p{
-
-                            margin-bottom: .5em;
-                            text-align: center;
-                        }
-
                     }
                 }
-                .view-commerce-cart-form{
-                    width: 600px;
-                    margin: 1em auto;
+                .view-commerce-cart-form {
+                    width: 100%;
+                    margin: 1em 0;
+                    border: 1px solid @oranje;
+                    border-radius: 20px;
+                    #views-form-commerce-cart-form-default{
+                        width: 90%;
+                        margin: 4em auto;
+                    }
                     table.views-table{
                         width: 100%;
+                        td.views-field-commerce-total{
+                            text-align: right;
+
+                        }
+                        th{
+                            padding-bottom: 1em;
+                        }
+                        th.views-field-commerce-total{
+                            text-align: right;
+                        }
                     }
+                    #edit-submit:hover, #edit-checkout:hover, .delete-line-item:hover{
+                        color: @oranje;
+                    }
+                    #edit-checkout{
+                        margin-left: 1em;
+                    }
+                }
+                .view-commerce-user-orders table{
+                    width: 100%;
+                }
+                .commerce-order-commerce-order{
+                    width: 100%;
+                    margin: 1em 0;
+                    padding: 1em 0;
+                    border: 1px solid @oranje;
+                    border-radius: 20px;
+                    .field{
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+                    .field-label{
+                        display: none;
+                    }
+                    .field-items .field-label{
+                        display: block;
+                    }
+                    .field-type-commerce-customer-profile-reference{
+                        margin-top: 2em;
+                    }
+
                 }
                 #commerce-checkout-form-checkout{
                     .fieldset-legend{
@@ -706,33 +582,39 @@ body.front{
                         font-size: 1em;
                         font-weight: 300;
                         letter-spacing: 1px;
-
                     }
                     #edit-cart-contents{
-                        width: 600px;
+                        width: 70%;
+                        margin: 1em auto;
+                        border: 1px solid @oranje;
+                        border-radius: 20px;
                         margin: 1em auto 3em;
                         table.views-table{
                             width: 100%;
                         }
+                        tr.component-type-commerce-price-formatted-amount{
+                            border-bottom: none;
+                        }
+                        .view-commerce-cart-summary{
+                            width: 95%;
+                            margin: 2em auto;
+                        }
                         table.commerce-price-formatted-components{
                             background-color: white;
-
                         }
                         .component-type-commerce-price-formatted-amount{
                             background-color: white;
-
                         }
-
                     }
                     fieldset{
-                        border: 1px solid @lichtgrijs;
+                        border: 1px solid @oranje;
                         padding: 1em;
                         margin-bottom: 2em;
                     }
                     .form-item{
                         clear: both;
                         float: left;
-
+                        margin-bottom: 0;
                         label{
                             float: left;
                             width: 150px;
@@ -746,24 +628,30 @@ body.front{
                             clear: both;
                             float: left;
                         }
-                    }
-                    .field-widget-options-buttons{
                         .form-radios{
-                            float: left;
-                            width: auto;
                             display: inline-block;
+                            margin-top: 0;
+                            margin-bottom: 0;
                             .form-item{
                                 float: left;
-                                width: auto;
-                                label.option{
-                                    float: left;
+                                clear: none;
+                                margin: 0 3em 0 0;
+                                line-height: 1em;
+                                label{
                                     width: auto;
-                                    margin-right: 2em;
+                                    margin-right: .5em;
+                                }
+                                input.form-radio{
+                                    margin-top: 0;
                                 }
                             }
                         }
-
                     }
+                    .description{
+                        line-height: 1.3em;
+                        font-style: italic;
+                    }
+
                     #edit-commerce-payment{
                         label{
                             width: auto;
@@ -771,21 +659,21 @@ body.front{
                         }
                         img{
                             float: left;
-                            margin-right: .5em ;
+                            margin: -.5em .5em  0 0;
                             width: auto;
                         }
                         #edit-commerce-payment-payment-method-paypal-wpscommerce-payment-paypal-wps{
                             float: left;
                             width: auto;
                             margin-right: 2em;
-                            height: 5em;
+                            height: 1.5em;
                         }
                         label.option{
-                            float: left;
-                            width: auto;
+                            float: right;
+                            width: 95%;
+
                         }
                         .commerce-paypal-icons{
-                            clear: left;
                             float: left;
                             display: inline-block;
                             margin-top: 1em;
@@ -794,16 +682,43 @@ body.front{
                                 margin-right: 1em;
                                 width: auto;
                                 padding: 0;
-                            }
-                            img{
-
+                                line-height: 1.5em;
                             }
                         }
-
                     }
-
+                    fieldset#edit-buttons{
+                        border: none;
+                        width: 100%;
+                        .fieldset-wrapper{
+                            width: 360px;
+                            margin: 2em auto;
+                        }
+                        #edit-continue, #edit-cancel{
+                            width: auto;
+                            background-color: @oranje;
+                            padding: 8px 15px;
+                            border: 1px solid @oranje;
+                            border-radius: 10px;
+                            font-size: .8em;
+                            color: white;
+                            line-height: 1em;
+                        }
+                        #edit-continue{
+                            margin-right: 2em;
+                        }
+                        #edit-cancel{
+                            margin-left: 2em;
+                        }
+                        #edit-continue:hover, #edit-cancel:hover{
+                            color: black;
+                        }
+                    }
                 }
+
             }
+            #commerce-checkout-form-complete legend .fieldset-legend{
+                    display: none;
+                }
             #block-block-1.contactinfo{
                 background-color: white;
 
@@ -842,28 +757,19 @@ body.front{
                 a.twitter:hover{
                     background-image: url("../images/twitter_hover.png");
                 }
-
-
-
-
-
             }
-
-
-
-
-
             #block-views-sponsor-block-1, #sponsors{
-                /*background-color: white;*/
-                margin: 0 0 1em;
+                margin-bottom: 1em;
                 width: 100%;
                 clear: both;
-
                 .views-row{
                     display: inline-block;
                     background-color: white;
                     margin: 0 .2em 0 0;
                     padding: 0;
+                    width: 160px;
+                    height: 100px;
+                    border: 1px solid @lichtgrijs;
                     a{
                         width: 160px;
                         height: 100px;
@@ -875,29 +781,28 @@ body.front{
                         margin-right: auto;
                     }
                 }
-                .node-sympathisanten {
-                    .field-item{
-                                    display: inline-block;
-                                    margin: 0 3em 2em 0;
-                                }
-                            }
-            }
-            #sponsors {
-                .views-row{
-                    border: 1px solid @lichtgrijs;
-                }
                 .hoofdsponsors, .sponsors{
-                        margin-bottom: 2em;
+                    margin-bottom: 4em;
+                }
+                .pane-node{
+                    h2{
+                        margin-bottom: 0.5em;
+                    }
+                    .node-sympathisanten .field-item{
+                        margin: 0 ;
+                        p{
+                            margin-bottom: 0;
+                            line-height: 2em;
+                        }
                     }
                 }
+            }
             #block-views-sponsor-block-1{
                 margin-top: 1em;
                 h2{
                     display: none;
                 }
             }
-
-
         }
     }
 }
@@ -905,9 +810,24 @@ body.front{
 
 }
 
-@media screen and (max-width:800px) and (min-width: 481px){
+@media screen and (max-width:840px) and (min-width: 481px){
 
+    #header #name-and-slogan{
+            margin: 3.5em 3% 0 200px;
+            text-align: right;
+            a {
+                font-size: 1.2em;
+            }
+        }
+    #main-wrapper #main #content #block-system-main .content {
+        padding: 2em ;
 
-
+    }
+    #main-wrapper #main #content .region.region-content #block-commerce-cart-cart{
+        margin: 2em 1em 1em;
+    }
+    .page-inschrijven #main-wrapper #main #content #block-system-main {
+        padding-right: 250px;
+    }
 
 }

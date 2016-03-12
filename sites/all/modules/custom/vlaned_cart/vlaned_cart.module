@@ -1,0 +1,33 @@
+<?php
+
+function vlaned_cart_form_alter(&$form, &$form_state, $form_id) {
+
+  if (strpos($form_id, 'commerce_cart_add_to_cart_form') !== FALSE) {
+    $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => t('Boek nu'),
+    );
+    $form['quantity']['#title'] = t('Aantal');
+  }
+}
+
+
+function vlaned_form_alter(&$form, &$form_state, $form_id) {
+  // Fix translation on checkout form
+  if ($form['#id'] == 'commerce-checkout-form-checkout'){
+    if(isset($form['customer_profile_billing'])){
+      $form['customer_profile_billing']['#title'] = t('Je gegevens');
+    }
+
+  }
+}
+
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function vlaned_field_widget_form_alter(&$element, $form_state, $context) {
+  if(!empty($element['#addressfield'])) {
+    $element['country']['#weight'] = 100;
+  }
+}
