@@ -799,7 +799,7 @@ body {
 #main-wrapper #main #content #block-views-sponsor-block-1 h2 {
   display: none;
 }
-@media screen and (max-width: 840px) and (min-width: 481px) {
+@media screen and (max-width: 840px) and (min-width: 541px) {
   #header #name-and-slogan {
     margin: 3.5em 3% 0 200px;
     text-align: right;
@@ -815,5 +815,51 @@ body {
   }
   .page-inschrijven #main-wrapper #main #content #block-system-main {
     padding-right: 250px;
+  }
+}
+@media screen and (max-width: 540px) {
+  body {
+    background: none;
+    background-color: white;
+  }
+  #header #name-and-slogan {
+    margin: 3.5em 3% 0 200px;
+    text-align: right;
+  }
+  #header #name-and-slogan a {
+    font-size: 1.2em;
+  }
+  #header #navigation {
+    margin-bottom: 0;
+  }
+  #header #navigation #block-menu-menu-inschrijven .content,
+  #header #navigation #block-menu-menu-info .content {
+    width: 100%;
+  }
+  #main-wrapper #main #content #block-system-main .content {
+    padding: 2em 1em ;
+  }
+  #main-wrapper #main #content .region.region-content #block-commerce-cart-cart {
+    width: 50%;
+    margin: 1em 0 1em 23%;
+    float: left;
+    display: block;
+  }
+  #main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .views-field-add-to-cart-form,
+  #main-wrapper #main #content #block-system-main #formulieren .add-to-mandje .commerce-add-to-cart {
+    float: right;
+    margin: 0;
+    width: 80%;
+  }
+  .page-inschrijven #main-wrapper #main #content #block-system-main {
+    padding: 0;
+    margin: 1em ;
+  }
+  .node-type-welkom #main-wrapper #main #content #block-system-main .content {
+    padding: 2em 0 ;
+  }
+  .node-type-welkom #main-wrapper #main #content #block-system-main .content p {
+    margin-left: 1em;
+    margin-right: 1em;
   }
 }

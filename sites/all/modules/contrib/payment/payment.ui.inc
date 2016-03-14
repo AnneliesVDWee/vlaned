@@ -377,7 +377,7 @@ function payment_form_payment_method(array $form, array &$form_state, PaymentMet
     '#title' => t('Owner'),
     '#default_value' => $payment_method->uid ? user_load($payment_method->uid)->name : $user->name,
     '#maxlength' => 255,
-    '#autocomplete_path' => 'user/autocomplete', 
+    '#autocomplete_path' => 'user/autocomplete',
     '#required' => TRUE,
   );
   $form['controller_form'] = array(
@@ -529,7 +529,7 @@ function payment_payment_status_sort_title(PaymentStatusInfo $status_a, PaymentS
 
 function payment_method_name_exists($name) {
   return !is_a(entity_load_single('payment_method', $name), 'PaymentMethodUnavailable');
-  
+
 }
 
 /**
@@ -1154,7 +1154,8 @@ function payment_method_options() {
   foreach (entity_load('payment_method') as $payment_method) {
     $options[$payment_method->pmid] = check_plain($payment_method->title_specific);
   }
-  natcasesort($pmid_options);
+  /* natcasesort($pmid_options);*/
+  natcasesort($options);
 
   return $options;
 }
